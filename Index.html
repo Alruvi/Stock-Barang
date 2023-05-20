@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Stok Barang</title>
+	
+	<!-- Link ke CSS Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	
+	<!-- Link ke file CSS custom -->
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+	<div class="container">
+		
+		<!-- Header -->
+		<header class="my-5">
+			<h1 class="text-center">Stok Barang</h1>
+		</header>
+		
+		<!-- Form input data barang -->
+		<form class="mb-5">
+			<div class="form-group row">
+				<label for="namaBarang" class="col-sm-2 col-form-label">Nama Barang:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="namaBarang" name="namaBarang" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="kodeBarang" class="col-sm-2 col-form-label">Kode Barang:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="kodeBarang" name="kodeBarang" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="jumlahStok" class="col-sm-2 col-form-label">Jumlah Stok:</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" id="jumlahStok" name="jumlahStok" min="0" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="hargaSatuan" class="col-sm-2 col-form-label">Harga Satuan:</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" id="hargaSatuan" name="hargaSatuan" min="0" required>
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Tambahkan</button>
+		</form>
+		
+		<!-- Tabel stok barang -->
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Nama Barang</th>
+					<th scope="col">Kode Barang</th>
+					<th scope="col">Jumlah Stok</th>
+					<th scope="col">Harga Satuan</th>
+					<th scope="col">Action</th>
+				</tr>
+			</thead>
+			<tbody id="barangTableBody"></tbody>
+		</table>
+		
+	</div>
+	
+	<!-- Link ke JS Bootstrap dan file script.js -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
+	
+</body>
+</html>
